@@ -16,11 +16,14 @@ const mongoosePaginate = require('mongoose-paginate')
  *              type: string
  *          email:
  *              type: string
+ *          services:
+ *              type: array
  * 
  *        required:
  *          - name
  *          - phone
  *          - email
+ *          - services
  *          
  */
 const ProviderSchema = new mongoose.Schema({
@@ -34,6 +37,10 @@ const ProviderSchema = new mongoose.Schema({
     },
     email:{
         type: String,
+        required: true,
+    },
+    services:{
+        type: [String],
         required: true,
     },
     createdAt:{
