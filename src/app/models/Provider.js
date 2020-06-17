@@ -18,6 +18,8 @@ const mongoosePaginate = require('mongoose-paginate')
  *              type: string
  *          services:
  *              type: array
+ *              items:
+ *                  type: string
  * 
  *        required:
  *          - name
